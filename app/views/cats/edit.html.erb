@@ -1,0 +1,43 @@
+<h1>EDIT YOUR KITTY</h1>
+<%= render 'form', cat: @cat, action: :patch %>
+
+
+
+<!-- <form action="<%=cat_url%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label for="name">Name</label>
+    <input id="name" type="text" name="cat[name]" value="<%= @cat.name %>">
+
+  <label for="birth_date">Birth Date</label>
+    <input id="birth_date" type="date" name="cat[birth_date]" value="<%= @cat.birth_date %>">
+
+  <label for="sex">Sex</label>
+    <% sex = @cat.sex %>
+    <% if sex == "M" %>
+      M<input id="sex" type="radio" name="cat[sex]" value="M" checked>
+      F<input id="sex" type="radio" name="cat[sex]" value="F">
+    <% else %>
+      M<input id="sex" type="radio" name="cat[sex]" value="M">
+      F<input id="sex" type="radio" name="cat[sex]" value="F" checked>
+    <% end %>
+
+  <label for="color">Color</label>
+    <select id="color" name="cat[color]">
+      <option value="Select Color" disabled="true" selected="true"></option>
+      <% cat_color = @cat.color %>
+      <% Cat::STANDARD_COLORS.each do |color| %>
+        <% if cat_color == color %>
+          <option value="<%=color%>" selected="true"><%=color%></option>
+        <% else %>
+          <option value="<%=color%>"><%=color%></option>
+        <% end %>
+      <% end %>
+
+    </select>
+
+  <label>Description</label>
+  <textarea name="cat[description]" rows="8" cols="80"><%= @cat.description %></textarea>
+
+  <input type="submit" value="Update Database">
+</form> -->
